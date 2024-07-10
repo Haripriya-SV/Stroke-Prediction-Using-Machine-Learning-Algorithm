@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stroke Prediction</title>
+    <style>
+        a:link {
+            color: rgb(244, 67, 111);
+            background-color: transparent;
+            text-decoration: underline;
+        }
+            
+        a:visited {
+            color: rgb(248, 13, 248);
+            background-color: transparent;
+            text-decoration: none;
+        }
+        
+        body{
+            background-image: url("https://st2.depositphotos.com/2779653/6132/i/600/depositphotos_61325687-stock-photo-stroke-cerebrovascular-accident-film-x.jpg");
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .logowrapper {
+          display: block;
+          padding: 20px 0;
+          }
+
+        h1 {
+      text-align: center;
+      color: #007bff;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      margin-left: 80px;
+      
+      border-radius: 10px;
+    }
+
+    label {
+      margin-left: 20px;
+
+      display: block;
+      margin-bottom: 5px;
+      color: #b435b4;
+    }
+
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #5b1694;
+      border-radius: 4px;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      margin-left: 20px;
+
+      
+    }
+
+    input[type="submit"] {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #a259a9;
+      color: #f7f5f9;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      margin-left: 20px;
+
+      background-color: #0056b3;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 600px) {
+      form {
+        
+        padding: 0 20px;
+      }
+    }
+    </style>
+</head>
+<body >
+
+  <h1 style="font-size:300%" margin-left: 20px>STROKE PREDICTION</h1>
+
+
+    <form id="strokeForm" action="C:\vs code python\html vs code\stroke-prediction\templates\app.py">
+        
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label for="hypertension">Hypertension (0 or 1):</label>
+        <input type="number" id="hypertension" name="hypertension" min="0" max="1" required><br><br>
+
+        <label for="heart_disease">Heart Disease (0 or 1):</label>
+        <input type="number" id="heart_disease" name="heart_disease" min="0" max="1" required><br><br>
+
+        <label for="avg_glucose_level">Average Glucose Level:</label>
+        <input type="number" id="avg_glucose_level" name="avg_glucose_level" required><br><br>
+
+        <label for="bmi">BMI (Body Mass Index):</label>
+        <input type="number" id="bmi" name="bmi" required><br><br>
+
+        
+
+        
+
+        <button id="submit" onclick="displaylabel()">predict</button>
+        <label id="mylabel" style="display:none;"></label>
+
+        
+    </form>
+
+    <div id="predict"></div>
+
+    <script>
+        document.getElementById('strokeForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Get form input values
+
+            const age = parseFloat(document.getElementById('age').value);
+            const hypertension = parseInt(document.getElementById('hypertension').value);
+
+            const sex = parseFloat(document.getElementById('sex').value);
+            
+
+            const heart_disease = parseInt(document.getElementById('heart_disease').value);
+            const avg_glucose_level = parseFloat(document.getElementById('avg_glucose_level').value);
+            const bmi = parseFloat(document.getElementById('bmi').value);
+            const gender = document.getElementById('gender').value;
+            const smoking_status = document.getElementById('smoking_status').value;
+
+            // Perform prediction (this is just a placeholder, you need to integrate the backend for actual prediction)
+            // For demonstration purposes, assume the result is based on the user's age only
+            
+            if (age > 60) {
+              <label for="prediction">Hight risk</label>
+            
+            }
+            <label for="prediction">Low rish</label>
+
+            // Display the prediction result
+            function displaylabel(){
+              const label = document.getElementById("mylabel");
+              label.innerHTML='Label displayed';
+              label.style.display='block';
+            }
+
+            
+            const predictionResult = document.getElementById('predict');
+            predictionResult.innerHTML = `<h2>Prediction Result:</h2><p>${predict}</p>`;
+        });
+    </script>
+    
+</body>
+</html>
