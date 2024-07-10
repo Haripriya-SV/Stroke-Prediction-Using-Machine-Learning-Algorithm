@@ -29,8 +29,8 @@ The dataset used for this project is sourced from [source link]. It contains ano
    ```
 
 ## Files
-- `stroke_prediction.ipynb`: Jupyter notebook containing the data analysis and machine learning model development process.
-- `data/stroke_data.csv`: CSV file containing the dataset used for training and testing.
+- `stroke_Prediction_Using_Machine_Learning_Algorithm.ipynb`: Jupyter notebook containing the data analysis and machine learning model development process.
+- `data/healthcare-dataset-stroke_data.csv`: CSV file containing the dataset used for training and testing.
 
 ## Usage
 1. Run the Jupyter notebook `stroke_prediction.ipynb`:
